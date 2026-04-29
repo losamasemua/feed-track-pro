@@ -115,21 +115,19 @@ export default function Forecasting() {
             <div className="grid" style={{ gridTemplateColumns: `200px repeat(12, minmax(36px, 1fr))` }}>
               <div className="text-xs text-muted-foreground" />
               {MONTHS.map(m => <div key={m} className="text-xs text-center text-muted-foreground py-1">{m}</div>)}
-              {rows.map(r => (
-                <>
-                  <div key={r.id+"-l"} className="text-xs py-1 pr-2 truncate">{r.nama}</div>
-                  {r.values.map((v, j) => {
-                    const c = idxColor(v);
-                    return (
-                      <div key={r.id + "-" + j}
-                        title={`${r.nama} · ${MONTHS[j]}: ${v} (${c.label})`}
-                        className={`m-0.5 rounded-sm h-7 flex items-center justify-center font-mono text-xs ${c.bg} ${c.text}`}>
-                        {v}
-                      </div>
-                    );
-                  })}
-                </>
-              ))}
+              {rows.flatMap(r => [
+                <div key={r.id+"-l"} className="text-xs py-1 pr-2 truncate">{r.nama}</div>,
+                ...r.values.map((v, j) => {
+                  const c = idxColor(v);
+                  return (
+                    <div key={r.id + "-" + j}
+                      title={`${r.nama} · ${MONTHS[j]}: ${v} (${c.label})`}
+                      className={`m-0.5 rounded-sm h-7 flex items-center justify-center font-mono text-xs ${c.bg} ${c.text}`}>
+                      {v}
+                    </div>
+                  );
+                })
+              ])}
             </div>
           </div>
         </div>
