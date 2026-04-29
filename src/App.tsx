@@ -1,25 +1,36 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
-import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
-import NotFound from "./pages/NotFound.tsx";
+import { AppProvider } from "@/context/AppContext";
+import { Layout } from "@/components/Layout";
+import Dashboard from "./pages/Dashboard";
+import BahanBaku from "./pages/BahanBaku";
+import Forecasting from "./pages/Forecasting";
+import Penawaran from "./pages/Penawaran";
+import AnalisisHarga from "./pages/AnalisisHarga";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <Sonner theme="dark" position="top-right" richColors />
+      <AppProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/bahan-baku" element={<BahanBaku />} />
+              <Route path="/forecasting" element={<Forecasting />} />
+              <Route path="/penawaran" element={<Penawaran />} />
+              <Route path="/analisis-harga" element={<AnalisisHarga />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </AppProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
