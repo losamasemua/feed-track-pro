@@ -37,11 +37,11 @@ export const forecastRows: ForecastRow[] = [
 export const PRICE_TREND = {
   months: ["Okt'25","Nov'25","Des'25","Jan'26","Feb'26","Mar'26","Apr'26"],
   series: [
-    { name: "Jagung",          color: "hsl(var(--primary))", data: [5800,6000,6300,6400,6200,5900,5800] },
-    { name: "Bungkil Kedelai", color: "hsl(var(--warning))", data: [8500,8600,8700,8800,8900,8900,9000] },
-    { name: "Tepung Ikan Imp", color: "hsl(var(--danger))",  data: [14000,14200,14500,14800,15000,15300,15500] },
-    { name: "Minyak Ikan",     color: "hsl(var(--purple))",  data: [32000,33500,35000,36000,37000,37500,38000] },
-    { name: "Bungkil Sawit",   color: "hsl(var(--success))", data: [1700,1750,1800,1800,1850,1850,1900] },
+    { name: "Jagung",          color: "hsl(var(--primary))", data: [5800,6000,6300,6500,6400,6300,6200] },
+    { name: "Bungkil Kedelai", color: "hsl(var(--warning))", data: [8700,8800,9000,9200,9300,9400,9500] },
+    { name: "Tepung Ikan Imp", color: "hsl(var(--danger))",  data: [14200,14500,14800,15200,15500,15800,16000] },
+    { name: "Minyak Ikan",     color: "hsl(var(--purple))",  data: [33000,34500,36000,37500,38500,39200,40000] },
+    { name: "Bungkil Sawit",   color: "hsl(var(--success))", data: [1750,1800,1850,1900,1950,1980,2000] },
   ],
 };
 
