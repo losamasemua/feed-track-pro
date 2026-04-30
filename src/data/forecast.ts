@@ -77,12 +77,12 @@ export interface SubPair { label: string; from: string; to: string; hematPct: nu
 
 // hematPct = % saving on cost of substituted volume
 export const subPairs: SubPair[] = [
-  { label:"SBM → PKM+Kopra blend",            from:"Bungkil Kedelai 48% (SBM)", to:"PKM+Kopra (blend 50:50)", hematPct:52, refHarga:9000,  subHarga:4320 },
-  { label:"Tepung Ikan Impor → FM Lokal+MBM", from:"Tepung Ikan Impor",         to:"FM Lokal + MBM (blend)",  hematPct:35, refHarga:15500, subHarga:10075 },
-  { label:"Jagung → Sorghum+Singkong",        from:"Jagung Pipil",              to:"Sorghum + Ubi Kayu",      hematPct:20, refHarga:5800,  subHarga:4640 },
-  { label:"Hay Alfalfa → Indigofera+Gamal",   from:"Hay Alfalfa Impor",         to:"Indigofera + Gamal",      hematPct:70, refHarga:7000,  subHarga:2100 },
-  { label:"Minyak Ikan → CPO+Flaxseed",       from:"Minyak Ikan",               to:"CPO + Flaxseed Oil",      hematPct:47, refHarga:38000, subHarga:20140 },
-  { label:"DCP → Tepung Tulang+Fitase",       from:"Dikalsium Fosfat (DCP)",    to:"Tepung Tulang + Fitase",  hematPct:28, refHarga:9500,  subHarga:6840 },
+  { label:"SBM → PKM+Kopra blend",            from:"Bungkil Kedelai 48% (SBM)", to:"PKM+Kopra (blend 50:50)", hematPct:50, refHarga:9500,  subHarga:4750 },
+  { label:"Tepung Ikan Impor → FM Lokal+MBM", from:"Tepung Ikan Impor",         to:"FM Lokal + MBM (blend)",  hematPct:36, refHarga:16000, subHarga:10240 },
+  { label:"Jagung → Sorghum+Singkong",        from:"Jagung Pipil",              to:"Sorghum + Ubi Kayu",      hematPct:22, refHarga:6200,  subHarga:4836 },
+  { label:"Hay Alfalfa → Indigofera+Gamal",   from:"Hay Alfalfa Impor",         to:"Indigofera + Gamal",      hematPct:72, refHarga:7500,  subHarga:2100 },
+  { label:"Minyak Ikan → CPO+Flaxseed",       from:"Minyak Ikan",               to:"CPO + Flaxseed Oil",      hematPct:48, refHarga:40000, subHarga:20800 },
+  { label:"DCP → Tepung Tulang+Fitase",       from:"Dikalsium Fosfat (DCP)",    to:"Tepung Tulang + Fitase",  hematPct:30, refHarga:10000, subHarga:7000 },
 ];
 
 export const initialOffers = [
