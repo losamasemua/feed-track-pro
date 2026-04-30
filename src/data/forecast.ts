@@ -37,11 +37,11 @@ export const forecastRows: ForecastRow[] = [
 export const PRICE_TREND = {
   months: ["Okt'25","Nov'25","Des'25","Jan'26","Feb'26","Mar'26","Apr'26"],
   series: [
-    { name: "Jagung",          color: "hsl(var(--primary))", data: [5800,6000,6300,6400,6200,5900,5800] },
-    { name: "Bungkil Kedelai", color: "hsl(var(--warning))", data: [8500,8600,8700,8800,8900,8900,9000] },
-    { name: "Tepung Ikan Imp", color: "hsl(var(--danger))",  data: [14000,14200,14500,14800,15000,15300,15500] },
-    { name: "Minyak Ikan",     color: "hsl(var(--purple))",  data: [32000,33500,35000,36000,37000,37500,38000] },
-    { name: "Bungkil Sawit",   color: "hsl(var(--success))", data: [1700,1750,1800,1800,1850,1850,1900] },
+    { name: "Jagung",          color: "hsl(var(--primary))", data: [5800,6000,6300,6500,6400,6300,6200] },
+    { name: "Bungkil Kedelai", color: "hsl(var(--warning))", data: [8700,8800,9000,9200,9300,9400,9500] },
+    { name: "Tepung Ikan Imp", color: "hsl(var(--danger))",  data: [14200,14500,14800,15200,15500,15800,16000] },
+    { name: "Minyak Ikan",     color: "hsl(var(--purple))",  data: [33000,34500,36000,37500,38500,39200,40000] },
+    { name: "Bungkil Sawit",   color: "hsl(var(--success))", data: [1750,1800,1850,1900,1950,1980,2000] },
   ],
 };
 
@@ -56,33 +56,33 @@ export interface VolatilityRow {
 }
 
 export const volatility: VolatilityRow[] = [
-  { nama:"Jagung Pipil",       okt:5800,  apr:5800,  perubahan:"-9.4% (dari Okt peak 6.400)", volatilitas:"TINGGI",        risiko:"Sedang",        waktu:"Apr–Mei (panen)", buffer:"30 hari" },
-  { nama:"Bungkil Kedelai",    okt:8500,  apr:9000,  perubahan:"+5.9%",  volatilitas:"SEDANG",        risiko:"Sedang",        waktu:"Kontrak 3 bulan", buffer:"21 hari" },
-  { nama:"Tepung Ikan Lokal",  okt:10500, apr:11000, perubahan:"+4.8%",  volatilitas:"SEDANG",        risiko:"Sedang",        waktu:"Jun–Agt",         buffer:"45 hari" },
-  { nama:"Tepung Ikan Impor",  okt:14000, apr:15500, perubahan:"+10.7%", volatilitas:"TINGGI",        risiko:"Tinggi",        waktu:"Jun–Agt",         buffer:"60 hari" },
-  { nama:"Dedak Padi",         okt:2700,  apr:2900,  perubahan:"+7.4%",  volatilitas:"SEDANG",        risiko:"Rendah",        waktu:"Apr–Mei & Okt",   buffer:"14 hari" },
-  { nama:"Bungkil Sawit PKM",  okt:1700,  apr:1900,  perubahan:"+11.8%", volatilitas:"RENDAH",        risiko:"Sangat Rendah", waktu:"Kapan saja",      buffer:"7 hari" },
-  { nama:"Minyak Sawit CPO",   okt:12000, apr:13500, perubahan:"+12.5%", volatilitas:"SEDANG",        risiko:"Sedang",        waktu:"Mar–Mei",         buffer:"21 hari" },
-  { nama:"CGM Corn Gluten",    okt:8000,  apr:8500,  perubahan:"+6.3%",  volatilitas:"SEDANG",        risiko:"Sedang",        waktu:"Kontrak 3 bulan", buffer:"30 hari" },
-  { nama:"DDGS Jagung",        okt:5500,  apr:5800,  perubahan:"+5.5%",  volatilitas:"SEDANG",        risiko:"Sedang",        waktu:"Stabil",          buffer:"21 hari" },
-  { nama:"Minyak Ikan",        okt:32000, apr:38000, perubahan:"+18.8%", volatilitas:"SANGAT TINGGI", risiko:"Sangat Tinggi", waktu:"Jun–Agt",         buffer:"60 hari" },
-  { nama:"Molases",            okt:2100,  apr:2300,  perubahan:"+9.5%",  volatilitas:"SEDANG",        risiko:"Rendah",        waktu:"Jun–Jul giling",  buffer:"21 hari" },
-  { nama:"DL-Metionin",        okt:48000, apr:52000, perubahan:"+8.3%",  volatilitas:"SEDANG",        risiko:"Sedang",        waktu:"Kontrak 6 bulan", buffer:"30 hari" },
-  { nama:"L-Lisin HCl",        okt:38000, apr:42000, perubahan:"+10.5%", volatilitas:"SEDANG",        risiko:"Rendah",        waktu:"Kontrak 3 bulan", buffer:"30 hari" },
-  { nama:"Tepung Maggot BSF",  okt:10000, apr:12000, perubahan:"+20.0%", volatilitas:"SEDANG",        risiko:"Rendah",        waktu:"Kontrak farm BSF",buffer:"14 hari" },
-  { nama:"Bungkil Kopra",      okt:2400,  apr:2600,  perubahan:"+8.3%",  volatilitas:"RENDAH",        risiko:"Rendah",        waktu:"Kapan saja",      buffer:"14 hari" },
+  { nama:"Jagung Pipil",       okt:5800,  apr:6200,  perubahan:"+6.9% (puncak Jan 6.500)", volatilitas:"TINGGI",        risiko:"Sedang",        waktu:"Apr–Mei (panen)", buffer:"30 hari" },
+  { nama:"Bungkil Kedelai",    okt:8700,  apr:9500,  perubahan:"+9.2%",  volatilitas:"SEDANG",        risiko:"Sedang",        waktu:"Kontrak 3 bulan", buffer:"21 hari" },
+  { nama:"Tepung Ikan Lokal",  okt:10800, apr:11500, perubahan:"+6.5%",  volatilitas:"SEDANG",        risiko:"Sedang",        waktu:"Jun–Agt",         buffer:"45 hari" },
+  { nama:"Tepung Ikan Impor",  okt:14200, apr:16000, perubahan:"+12.7%", volatilitas:"TINGGI",        risiko:"Tinggi",        waktu:"Jun–Agt",         buffer:"60 hari" },
+  { nama:"Dedak Padi",         okt:2800,  apr:3000,  perubahan:"+7.1%",  volatilitas:"SEDANG",        risiko:"Rendah",        waktu:"Apr–Mei & Okt",   buffer:"14 hari" },
+  { nama:"Bungkil Sawit PKM",  okt:1750,  apr:2000,  perubahan:"+14.3%", volatilitas:"RENDAH",        risiko:"Sangat Rendah", waktu:"Kapan saja",      buffer:"7 hari" },
+  { nama:"Minyak Sawit CPO",   okt:12500, apr:14500, perubahan:"+16.0%", volatilitas:"SEDANG",        risiko:"Sedang",        waktu:"Mar–Mei",         buffer:"21 hari" },
+  { nama:"CGM Corn Gluten",    okt:8400,  apr:9000,  perubahan:"+7.1%",  volatilitas:"SEDANG",        risiko:"Sedang",        waktu:"Kontrak 3 bulan", buffer:"30 hari" },
+  { nama:"DDGS Jagung",        okt:5700,  apr:6100,  perubahan:"+7.0%",  volatilitas:"SEDANG",        risiko:"Sedang",        waktu:"Stabil",          buffer:"21 hari" },
+  { nama:"Minyak Ikan",        okt:33000, apr:40000, perubahan:"+21.2%", volatilitas:"SANGAT TINGGI", risiko:"Sangat Tinggi", waktu:"Jun–Agt",         buffer:"60 hari" },
+  { nama:"Molases",            okt:2200,  apr:2450,  perubahan:"+11.4%", volatilitas:"SEDANG",        risiko:"Rendah",        waktu:"Jun–Jul giling",  buffer:"21 hari" },
+  { nama:"DL-Metionin",        okt:50000, apr:54000, perubahan:"+8.0%",  volatilitas:"SEDANG",        risiko:"Sedang",        waktu:"Kontrak 6 bulan", buffer:"30 hari" },
+  { nama:"L-Lisin HCl",        okt:40000, apr:44000, perubahan:"+10.0%", volatilitas:"SEDANG",        risiko:"Rendah",        waktu:"Kontrak 3 bulan", buffer:"30 hari" },
+  { nama:"Tepung Maggot BSF",  okt:11000, apr:13000, perubahan:"+18.2%", volatilitas:"SEDANG",        risiko:"Rendah",        waktu:"Kontrak farm BSF",buffer:"14 hari" },
+  { nama:"Bungkil Kopra",      okt:2500,  apr:2800,  perubahan:"+12.0%", volatilitas:"RENDAH",        risiko:"Rendah",        waktu:"Kapan saja",      buffer:"14 hari" },
 ];
 
 export interface SubPair { label: string; from: string; to: string; hematPct: number; refHarga: number; subHarga: number; }
 
 // hematPct = % saving on cost of substituted volume
 export const subPairs: SubPair[] = [
-  { label:"SBM → PKM+Kopra blend",            from:"Bungkil Kedelai 48% (SBM)", to:"PKM+Kopra (blend 50:50)", hematPct:52, refHarga:9000,  subHarga:4320 },
-  { label:"Tepung Ikan Impor → FM Lokal+MBM", from:"Tepung Ikan Impor",         to:"FM Lokal + MBM (blend)",  hematPct:35, refHarga:15500, subHarga:10075 },
-  { label:"Jagung → Sorghum+Singkong",        from:"Jagung Pipil",              to:"Sorghum + Ubi Kayu",      hematPct:20, refHarga:5800,  subHarga:4640 },
-  { label:"Hay Alfalfa → Indigofera+Gamal",   from:"Hay Alfalfa Impor",         to:"Indigofera + Gamal",      hematPct:70, refHarga:7000,  subHarga:2100 },
-  { label:"Minyak Ikan → CPO+Flaxseed",       from:"Minyak Ikan",               to:"CPO + Flaxseed Oil",      hematPct:47, refHarga:38000, subHarga:20140 },
-  { label:"DCP → Tepung Tulang+Fitase",       from:"Dikalsium Fosfat (DCP)",    to:"Tepung Tulang + Fitase",  hematPct:28, refHarga:9500,  subHarga:6840 },
+  { label:"SBM → PKM+Kopra blend",            from:"Bungkil Kedelai 48% (SBM)", to:"PKM+Kopra (blend 50:50)", hematPct:50, refHarga:9500,  subHarga:4750 },
+  { label:"Tepung Ikan Impor → FM Lokal+MBM", from:"Tepung Ikan Impor",         to:"FM Lokal + MBM (blend)",  hematPct:36, refHarga:16000, subHarga:10240 },
+  { label:"Jagung → Sorghum+Singkong",        from:"Jagung Pipil",              to:"Sorghum + Ubi Kayu",      hematPct:22, refHarga:6200,  subHarga:4836 },
+  { label:"Hay Alfalfa → Indigofera+Gamal",   from:"Hay Alfalfa Impor",         to:"Indigofera + Gamal",      hematPct:72, refHarga:7500,  subHarga:2100 },
+  { label:"Minyak Ikan → CPO+Flaxseed",       from:"Minyak Ikan",               to:"CPO + Flaxseed Oil",      hematPct:48, refHarga:40000, subHarga:20800 },
+  { label:"DCP → Tepung Tulang+Fitase",       from:"Dikalsium Fosfat (DCP)",    to:"Tepung Tulang + Fitase",  hematPct:30, refHarga:10000, subHarga:7000 },
 ];
 
 export const initialOffers = [
