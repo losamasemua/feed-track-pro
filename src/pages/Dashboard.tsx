@@ -8,6 +8,15 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianG
 import { coreIngredients, macroSignals, PRICE_RISE_THRESHOLD, type CoreIngredient } from "@/data/context";
 import { PRICE_TREND } from "@/data/forecast";
 import { fmtRp, fmtPct } from "@/lib/format";
+import TradingViewChart from "@/components/TradingViewChart";
+
+// Pemetaan bahan utama -> simbol futures global di TradingView (acuan harga dunia)
+const tvSymbolByKey: Record<string, { symbol: string; label: string } | undefined> = {
+  sbm:           { symbol: "CBOT:ZM1!",  label: "CBOT Soybean Meal Futures (acuan global SBM)" },
+  jagung:        { symbol: "CBOT:ZC1!",  label: "CBOT Corn Futures (acuan global Jagung)" },
+  pkm:           { symbol: "FX_IDC:CPOUSD", label: "CPO (acuan turunan Bungkil Sawit)" },
+  "minyak-ikan": { symbol: "NYMEX:CL1!", label: "Crude Oil (proxy biaya logistik & substitusi minyak)" },
+};
 
 const kategoriIcon: Record<string, typeof Globe2> = {
   Iklim: CloudRain,
