@@ -194,6 +194,19 @@ export default function Dashboard() {
           ) : (
             <div className="text-xs text-muted-foreground italic py-4">Trend bulanan tidak tersedia untuk bahan ini.</div>
           )}
+
+          {tvSymbolByKey[activeKey] && (
+            <div className="mt-5 pt-5 border-t border-border">
+              <div className="flex items-center gap-2 mb-2">
+                <LineIcon className="h-4 w-4 text-primary" />
+                <h4 className="font-semibold text-sm">Acuan Global Real-Time · TradingView</h4>
+              </div>
+              <p className="text-xs text-muted-foreground mb-3">
+                {tvSymbolByKey[activeKey]!.label} — fluktuasi futures global biasanya memimpin harga lokal 2–6 minggu.
+              </p>
+              <TradingViewChart symbol={tvSymbolByKey[activeKey]!.symbol} height={380} />
+            </div>
+          )}
         </div>
 
         {/* Kanan: konteks makro relevan */}
