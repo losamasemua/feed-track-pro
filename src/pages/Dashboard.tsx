@@ -8,6 +8,15 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianG
 import { coreIngredients, macroSignals, PRICE_RISE_THRESHOLD, type CoreIngredient } from "@/data/context";
 import { PRICE_TREND } from "@/data/forecast";
 import { fmtRp, fmtPct } from "@/lib/format";
+import TradingViewChart from "@/components/TradingViewChart";
+
+// Pemetaan bahan utama -> simbol futures global di TradingView (acuan harga dunia)
+const tvSymbolByKey: Record<string, { symbol: string; label: string } | undefined> = {
+  sbm:           { symbol: "CBOT:ZM1!",  label: "CBOT Soybean Meal Futures (acuan global SBM)" },
+  jagung:        { symbol: "CBOT:ZC1!",  label: "CBOT Corn Futures (acuan global Jagung)" },
+  pkm:           { symbol: "FX_IDC:CPOUSD", label: "CPO (acuan turunan Bungkil Sawit)" },
+  "minyak-ikan": { symbol: "NYMEX:CL1!", label: "Crude Oil (proxy biaya logistik & substitusi minyak)" },
+};
 
 const kategoriIcon: Record<string, typeof Globe2> = {
   Iklim: CloudRain,
@@ -184,6 +193,19 @@ export default function Dashboard() {
             </div>
           ) : (
             <div className="text-xs text-muted-foreground italic py-4">Trend bulanan tidak tersedia untuk bahan ini.</div>
+          )}
+
+          {tvSymbolByKey[activeKey] && (
+            <div className="mt-5 pt-5 border-t border-border">
+              <div className="flex items-center gap-2 mb-2">
+                <LineIcon className="h-4 w-4 text-primary" />
+                <h4 className="font-semibold text-sm">Acuan Global Real-Time · TradingView</h4>
+              </div>
+              <p className="text-xs text-muted-foreground mb-3">
+                {tvSymbolByKey[activeKey]!.label} — fluktuasi futures global biasanya memimpin harga lokal 2–6 minggu.
+              </p>
+              <TradingViewChart symbol={tvSymbolByKey[activeKey]!.symbol} height={380} />
+            </div>
           )}
         </div>
 
