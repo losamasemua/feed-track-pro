@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AppProvider } from "@/context/AppContext";
@@ -19,7 +19,7 @@ const App = () => (
       <Sonner theme="dark" position="top-right" richColors />
       <AppProvider>
         <BrowserRouter>
-          <Routes>
+          <HashRouter>
             <Route element={<Layout />}>
               <Route path="/" element={<Dashboard />} />
               <Route path="/bahan-baku" element={<BahanBaku />} />
@@ -29,7 +29,7 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </AppProvider>
     </TooltipProvider>
   </QueryClientProvider>
