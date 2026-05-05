@@ -13,26 +13,28 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Sonner theme="dark" position="top-right" richColors />
-      <AppProvider>
-        <BrowserRouter>
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Sonner theme="dark" position="top-right" richColors />
+        <AppProvider>
           <HashRouter>
-            <Route element={<Layout />}>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/bahan-baku" element={<BahanBaku />} />
-              <Route path="/forecasting" element={<Forecasting />} />
-              <Route path="/penawaran" element={<Penawaran />} />
-              <Route path="/analisis-harga" element={<AnalisisHarga />} />
-              <Route path="*" element={<NotFound />} />
-            </Route>
-          </Routes>
-        </HashRouter>
-      </AppProvider>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+            <Routes>
+              <Route element={<Layout />}>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/bahan-baku" element={<BahanBaku />} />
+                <Route path="/forecasting" element={<Forecasting />} />
+                <Route path="/penawaran" element={<Penawaran />} />
+                <Route path="/analisis-harga" element={<AnalisisHarga />} />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+            </Routes>
+          </HashRouter>
+        </AppProvider>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
